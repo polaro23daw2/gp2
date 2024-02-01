@@ -26,6 +26,6 @@ import {ContadorComponent} from './contador.component';
     AppEncaminamentModule
   ],
   providers: [],
-  bootstrap: [ContadorComponent ]
+  bootstrap: [M11_EncaminamentComponent ]
 })
 export class AppModule { }
