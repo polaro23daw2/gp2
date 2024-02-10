@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body class="text-center bg-light">
-    <h1>Projecte Global 2</h1>
-    <h2>Guerra a Ucraïna</h2>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 40vh;
+      }
+      .container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <p>
+        ¿Cuánto tiempo ha pasado desde el inicio de la guerra de Ucrania?<br />
 
-    <div>
-        <h1>{{ tiempoTranscurrido }}</h1>
+    </p>
+      
+      <button (click)="toggleDiv()">Haz clic en el botón para saberlo</button>
+
+      <div *ngIf="mostrarDiv">
+        <h4>{{ tiempoTranscurrido }}</h4>
+      </div>
     </div>
-</body> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
 </html>

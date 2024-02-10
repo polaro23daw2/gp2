@@ -1,13 +1,12 @@
-// contador.component.ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'aplicacio',
   templateUrl: 'GP2.html',
 })
-
 export class ContadorComponent implements OnInit {
     tiempoTranscurrido: string = '';
+    mostrarDiv: boolean = false;
   
     ngOnInit() {
       this.iniciarContador();
@@ -33,5 +32,8 @@ export class ContadorComponent implements OnInit {
   
       this.tiempoTranscurrido = `${anos} años, ${dias} días, ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
     }
-  
-  }
+
+    toggleDiv() {
+      this.mostrarDiv = !this.mostrarDiv;
+    }
+}
