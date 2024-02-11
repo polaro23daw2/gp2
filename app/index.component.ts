@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'aplicacio',
@@ -55,5 +56,19 @@ export class index {
   }
   toggleHighlightV3() {
     this.estadoV3 = this.estadoV3 === 'normal' ? 'resaltadoV3' : 'normal';
+  }
+  informacion: any; // Aquí almacenarás los datos de la API
+
+  constructor(private dataService: DataService) { }
+
+  ngOnInit() {
+    this.dataService.getInformacion().subscribe(
+      data => {
+        this.informacion = data;
+      },
+      error => {
+        console.error('Error fetching data:', error);
+      }
+    );
   }
 }

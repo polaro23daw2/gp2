@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'aplicacio',
-  templateUrl: 'GP2.html',
+  templateUrl: 'contador.html',
 })
 export class ContadorComponent implements OnInit {
-    tiempoTranscurrido: string = '';
-    mostrarDiv: boolean = false;
+  tiempoTranscurrido: string = '';
+  mostrarDiv: boolean = false;
+  animacionClase: string = '';
   
     ngOnInit() {
       this.iniciarContador();
@@ -35,5 +36,6 @@ export class ContadorComponent implements OnInit {
 
     toggleDiv() {
       this.mostrarDiv = !this.mostrarDiv;
+      this.animacionClase = this.mostrarDiv ? 'fade-in' : ''; // Cambia la clase basada en mostrarDiv
     }
 }
