@@ -10,6 +10,12 @@ body {
 b{
   font-weight: bold;
 }
+span,#span {
+  color: blue;
+  width: 50%;
+  margin: 0 auto;
+}
+
 .section {
   display: flex;
   justify-content: space-between;
@@ -46,7 +52,8 @@ b{
   margin-bottom: 15px;
 }
 #h2{
-  text-align: center;
+  text-align: left;
+  font-weight: bold;
 }
 .Index{
   margin: 100px;

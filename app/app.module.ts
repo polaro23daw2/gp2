@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 import { AppEncaminamentModule } from './app-encaminament.module';
@@ -24,9 +27,9 @@ import {informacion} from './informacion.component';
     FormsModule,
     BrowserModule,
     AppEncaminamentModule,
-    HttpClientModule
-    
-
+    HttpClientModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [M11_EncaminamentComponent ]
