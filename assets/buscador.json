@@ -1,0 +1,42 @@
+{
+    "ucrania":{
+        "nombre":"Ucrania",
+        "capital":"Kiev",
+        "idioma":"Ucraniano",
+        "poblacion":42692393,
+        "moneda":"Grivna",
+        "gentilicio":"Ucraniano"
+    },
+    "yemen":{
+        "nombre":"Yemen",
+        "capital":"Saná",
+        "idioma":"Árabe",
+        "poblacion":28250420,
+        "moneda":"Rial yemení",
+        "gentilicio":"Yemení"
+    },
+    "bukinafaso":{
+        "nombre":"Burkina Faso",
+        "capital":"Uagadugú",
+        "idioma":"Francés",
+        "poblacion":19034397,
+        "moneda":"Franco CFA",
+        "gentilicio":"Burkinés"
+    },
+    "eslovaquia":{
+        "nombre":"Eslovaquia",
+        "capital":"Bratislava",
+        "idioma":"Eslovaco",
+        "poblacion":5450421,
+        "moneda":"Euro",
+        "gentilicio":"Eslovaco"
+    },
+    "guinea":{
+        "nombre":"Guinea Ecuatorial",
+        "capital":"Malabo",
+        "idioma":"Español",
+        "poblacion":1267689,
+        "moneda":"Franco CFA",
+        "gentilicio":"Ecuatoguineano"
+    }
+}

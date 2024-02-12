@@ -36,6 +36,6 @@ export class ContadorComponent implements OnInit {
 
     toggleDiv() {
       this.mostrarDiv = !this.mostrarDiv;
-      this.animacionClase = this.mostrarDiv ? 'fade-in' : ''; // Cambia la clase basada en mostrarDiv
+      this.animacionClase = this.mostrarDiv ? 'fade-in' : '';
     }
 }

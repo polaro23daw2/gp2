@@ -4,7 +4,7 @@ import { DataService } from './data.service';
 
 @Component({
   selector: 'aplicacio',
-  templateUrl: 'index.html',
+  templateUrl: 'copi_index.html',
   styleUrls: ['../app/style.css'],
   animations: [
     trigger('resaltar', [
@@ -61,14 +61,14 @@ export class index {
 
   constructor(private dataService: DataService) { }
 
-  ngOnInit() {
-    this.dataService.getInformacion().subscribe(
-      data => {
-        this.informacion = data;
-      },
-      error => {
-        console.error('Error fetching data:', error);
-      }
-    );
-  }
+  // ngOnInit() {
+  //   this.dataService.getInformacion().subscribe(
+  //     data => {
+  //       this.informacion = data;
+  //     },
+  //     error => {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   );
+  // }
 }

@@ -21,17 +21,31 @@
 </head>
 <body>
 
-<div class="container">
-    <h4>Buscador Simple</h4>
-    <div class="input-field">
-        <input id="search" type="search" required placeholder="Escribe aquí para buscar...">
-        <label for="search"></label>
-        <i class="material-icons">close</i>
-    </div>
-    <button class="btn waves-effect waves-light" type="submit" name="action">Buscar
-        <i class="material-icons right">search</i>
-    </button>
+    <div class="container">
+        <h4>Buscador Simple</h4>
+        <div class="input-field">
+            <input id="search" type="search" [(ngModel)]="searchTerm" (keyup)="search()" required placeholder="Escribe aquí para buscar...">
+            <label for="search"></label>
+            <i class="material-icons">close</i>
+        </div>
+<!-- aqui esta lo guy xD si no pones nada no busca y si pones algo incorrecto te dice el error de empty -->
+<div *ngIf="searchPerformed">
+    <ul *ngIf="hasResults()">
+      <li *ngFor="let country of filteredInformation | keyvalue">
+        <strong>Nombre:</strong> {{ country.value.nombre }}<br>
+        <strong>Capital:</strong> {{ country.value.capital }}<br>
+        <strong>Idioma:</strong> {{ country.value.idioma }}<br>
+        <strong>Población:</strong> {{ country.value.poblacion | number }}<br>
+        <strong>Moneda:</strong> {{ country.value.moneda }}<br>
+        <strong>Gentilicio:</strong> {{ country.value.gentilicio }}
+      </li>
+    </ul>
+    <p *ngIf="isEmpty()">No se encontraron resultados.</p>
 </div>
+  
+          
+    </div>
+    
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
