@@ -4,7 +4,7 @@ import { DataService } from './data.service';
 
 @Component({
   selector: 'aplicacio',
-  templateUrl: 'copi_index.html',
+  templateUrl: 'index.html',
   styleUrls: ['../app/style.css'],
   animations: [
     trigger('resaltar', [

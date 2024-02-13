@@ -1,52 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buscador</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            width: 50%;
-            text-align: center;
-        }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        width: 50%;
+        text-align: center;
+      }
     </style>
-</head>
-<body>
 
+    10%
+  </head>
+  <body>
     <div class="container">
-        <h4>Buscador Simple</h4>
-        <div class="input-field">
-            <input id="search" type="search" [(ngModel)]="searchTerm" (keyup)="search()" required placeholder="Escribe aquí para buscar...">
-            <label for="search"></label>
-            <i class="material-icons">close</i>
-        </div>
-<!-- aqui esta lo guy xD si no pones nada no busca y si pones algo incorrecto te dice el error de empty -->
-<div *ngIf="searchPerformed">
-    <ul *ngIf="hasResults()">
-      <li *ngFor="let country of filteredInformation | keyvalue">
-        <strong>Nombre:</strong> {{ country.value.nombre }}<br>
-        <strong>Capital:</strong> {{ country.value.capital }}<br>
-        <strong>Idioma:</strong> {{ country.value.idioma }}<br>
-        <strong>Población:</strong> {{ country.value.poblacion | number }}<br>
-        <strong>Moneda:</strong> {{ country.value.moneda }}<br>
-        <strong>Gentilicio:</strong> {{ country.value.gentilicio }}
-      </li>
-    </ul>
-    <p *ngIf="isEmpty()">No se encontraron resultados.</p>
-</div>
-  
-          
-    </div>
-    
+      <h4>Buscador Simple</h4>
+      <div class="input-field">
+        <input
+          id="search"
+          type="search"
+          [(ngModel)]="searchTerm"
+          (keyup)="search()"
+          required
+          placeholder="Escribe aquí para buscar..."
+        />
+        <label for="search"></label>
+        <i class="material-icons">close</i>
+      </div>
+      <div *ngIf="searchPerformed">
+        <button *ngIf="searchPerformed" (click)="toggleTextShortening()">
+          Contraer y expandir texto
+        </button>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
+        <ul *ngIf="hasResults()">
+          <li *ngFor="let country of filteredInformation | keyvalue">
+            <img
+              src="{{ country.value.bandera }}"
+              alt="Bandera de {{ country.value.nombre }}"
+              style="max-width: 100px; max-height: 100px"
+            />
+            <br />
+            <strong>descripció:</strong>
+            <span *ngIf="!applyTextShortening"
+              >{{ country.value.descripcio }}</span
+            >
+            <span *ngIf="applyTextShortening"
+              >{{ country.value.descripcio | formatoDescripcion }}</span
+            >
+            <br />
+          </li>
+        </ul>
+
+        <p *ngIf="isEmpty()">No se encontraron resultados.</p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
 </html>

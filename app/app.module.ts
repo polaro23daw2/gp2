@@ -13,6 +13,8 @@ import {ContadorComponent} from './contador.component';
 import {index} from './index.component';
 import {buscador} from './buscador.component';
 import {informacion} from './informacion.component';
+import {ListarPaisesPipe} from './listar-paises.pipe';
+import {FormatoDescripcionPipe} from './formatoDescripcion.pipe';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import {informacion} from './informacion.component';
     index,
     ContadorComponent,
     buscador,
-    informacion
+    informacion,
+    FormatoDescripcionPipe,
+    ListarPaisesPipe
   ],
   imports: [
     FormsModule,
@@ -31,6 +35,7 @@ import {informacion} from './informacion.component';
     FlexLayoutModule,
     BrowserAnimationsModule
   ],
+  exports: [ListarPaisesPipe],
   providers: [],
   bootstrap: [M11_EncaminamentComponent ]
 })

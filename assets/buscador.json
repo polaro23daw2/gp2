@@ -1,42 +1,27 @@
 {
     "ucrania":{
-        "nombre":"Ucrania",
-        "capital":"Kiev",
-        "idioma":"Ucraniano",
-        "poblacion":42692393,
-        "moneda":"Grivna",
-        "gentilicio":"Ucraniano"
+        "bandera":"https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg",
+        "nombre":"Ucraïna",
+        "descripcio":"Ucraïna és un país de l'Europa de l'Est. Limita amb Rússia al nord-est, Bielorússia al nord, Polònia, Eslovàquia i Hongria a l'oest, Romania i Moldàvia al sud-oest, i la mar Negra i la mar d'Azov al sud. La seva capital i ciutat més gran és Kiev."
     },
     "yemen":{
+        "bandera":"https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Yemen.svg",
         "nombre":"Yemen",
-        "capital":"Saná",
-        "idioma":"Árabe",
-        "poblacion":28250420,
-        "moneda":"Rial yemení",
-        "gentilicio":"Yemení"
+        "descripcio":"Yemen és un país de l'Àsia occidental, a la punta sud-est de la península aràbiga. Limita amb Aràbia Saudita al nord, el mar Roig a l'oest, el mar Aràbic a l'est, i Oman al sud-est."
     },
     "bukinafaso":{
+        "bandera":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXUxUVsJnQcooHWPPRZXH3b6cW4TJptHsi0ga3faer8DMTx871mjMu2lusazQf&s=10",
         "nombre":"Burkina Faso",
-        "capital":"Uagadugú",
-        "idioma":"Francés",
-        "poblacion":19034397,
-        "moneda":"Franco CFA",
-        "gentilicio":"Burkinés"
+        "descripcio":"Burkina Faso és un país de l'Àfrica occidental. Limita amb Mali al nord-oest, Níger al nord-est, Benín al sud-est, Togo i Ghana al sud, i Costa d'Ivori a l'oest."
     },
     "eslovaquia":{
-        "nombre":"Eslovaquia",
-        "capital":"Bratislava",
-        "idioma":"Eslovaco",
-        "poblacion":5450421,
-        "moneda":"Euro",
-        "gentilicio":"Eslovaco"
+        "bandera":"https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Slovakia.svg",
+        "nombre":"Eslovàquia",
+        "descripcio":"Eslovàquia és un país d'Europa central. Limita amb la República Txeca i Àustria al nord-oest, Polònia al nord, Ucraïna a l'est, Hongria al sud, i Àustria al sud-oest."
     },
     "guinea":{
-        "nombre":"Guinea Ecuatorial",
-        "capital":"Malabo",
-        "idioma":"Español",
-        "poblacion":1267689,
-        "moneda":"Franco CFA",
-        "gentilicio":"Ecuatoguineano"
+        "bandera":"https://upload.wikimedia.org/wikipedia/commons/e/ed/Flag_of_Guinea.svg",
+        "nombre":"Guinea",
+        "descripcio":"Guinea és un país de l'Àfrica occidental. Limita amb Guinea-Bissau i el mar Atlàntic a l'oest, Senegal i Mali al nord, Costa d'Ivori a l'est, Libèria i Sierra Leone al sud."
     }
 }
